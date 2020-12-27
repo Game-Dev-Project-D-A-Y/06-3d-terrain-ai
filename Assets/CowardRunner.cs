@@ -8,12 +8,6 @@ using UnityEngine.AI;
  */
 [RequireComponent(typeof(NavMeshAgent))]
 public class CowardRunner: MonoBehaviour {
-    [Tooltip("Minimum time to wait at target between running to the next target")]
-    [SerializeField] private float minWaitAtTarget = 7f;
-
-    [Tooltip("Maximum time to wait at target between running to the next target")]
-    [SerializeField] private float maxWaitAtTarget = 15f;
-
 
     [Tooltip("A game object whose children have a Target component. Each child represents a target.")]
     [SerializeField] private Transform targetFolder = null;
@@ -26,7 +20,6 @@ public class CowardRunner: MonoBehaviour {
 
     [SerializeField] private Target furthestTarget = null;
     [SerializeField] private float furthestDistance = -1;
-    [SerializeField] private float timeToWaitAtTarget = 0;
 
     private NavMeshAgent navMeshAgent;
     private Animator animator;
@@ -43,7 +36,6 @@ public class CowardRunner: MonoBehaviour {
     }
 
     private void SelectNewTarget() {
-        Debug.Log("SelectNewTarget");
         furthestDistance = 0;
         foreach(Target target in allTargets)
         {
@@ -54,7 +46,6 @@ public class CowardRunner: MonoBehaviour {
                 furthestTarget = target;
             }
         }
-        Debug.Log("New target: " + furthestTarget.name);
         navMeshAgent.SetDestination(furthestTarget.transform.position);
     }
 
@@ -63,19 +54,15 @@ public class CowardRunner: MonoBehaviour {
         hasPath = navMeshAgent.hasPath;
         if (hasPath) {
             FaceDestination();
-        } else {
-            Debug.Log("has no path");
-            GameObject playerObj = GameObject.Find("Player");
-            currentPlayerPosition = playerObj.transform.position;
-            SelectNewTarget();
         }
-        
+        GameObject playerObj = GameObject.Find("Player");
+        currentPlayerPosition = playerObj.transform.position;
+        SelectNewTarget();
     }
 
     private void FaceDestination() {
         Vector3 directionToDestination = (navMeshAgent.destination - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(directionToDestination.x, 0, directionToDestination.z));
-        //transform.rotation = lookRotation; // Immediate rotation
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed); // Gradual rotation
     }
 
