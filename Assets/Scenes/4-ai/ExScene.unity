@@ -530,6 +530,91 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1001 &171413994
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 246.60695
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.995113
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 138.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551221154, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551717826, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyChaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831332328551717826, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397956496172036610, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: targetFolder
+      value: 
+      objectReference: {fileID: 450925663}
+    - target: {fileID: 8397956496172036610, guid: 979a9ef34330fee42b77b4cf33c126b7,
+        type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 1673566023}
+    m_RemovedComponents:
+    - {fileID: 8397956496172036610, guid: 979a9ef34330fee42b77b4cf33c126b7, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 979a9ef34330fee42b77b4cf33c126b7, type: 3}
 --- !u!1001 &223503389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1717,6 +1802,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 10034083}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1166238864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4831332328551717826, guid: 979a9ef34330fee42b77b4cf33c126b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 171413994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1166238865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166238864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf0e50ac407f924786ba43f9416cf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPosition: {fileID: 1673566023}
+  currentPlayerPosition: {x: 0, y: 0, z: 0}
+  hasPath: 0
 --- !u!1 &1216297366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5ee7fe175f5905e41a344dc179e02190,
