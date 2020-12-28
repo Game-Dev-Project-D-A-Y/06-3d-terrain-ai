@@ -1239,6 +1239,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7823133}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &867635128 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1467135558779712806, guid: e5cd17dbfce536d4fb103a26a3ae22b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 223503389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &912411149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5ee7fe175f5905e41a344dc179e02190,
@@ -1277,6 +1283,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.54
   m_Center: {x: 0.0000000021125377, y: -0.07273301, z: 0.035457764}
+--- !u!198 &1007494061 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1467135558779693294, guid: e5cd17dbfce536d4fb103a26a3ae22b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 223503389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1038934524 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 5ee7fe175f5905e41a344dc179e02190,
@@ -2426,6 +2438,41 @@ PrefabInstance:
       propertyPath: engine
       value: 
       objectReference: {fileID: 1618991062}
+    - target: {fileID: 658748013978330630, guid: 87f89849fa4f7d445840351cdf0b5f41,
+        type: 3}
+      propertyPath: engineLightOff
+      value: 
+      objectReference: {fileID: 2128618808}
+    - target: {fileID: 658748013978330630, guid: 87f89849fa4f7d445840351cdf0b5f41,
+        type: 3}
+      propertyPath: enemyObj
+      value: 
+      objectReference: {fileID: 2016976918}
+    - target: {fileID: 658748013978330630, guid: 87f89849fa4f7d445840351cdf0b5f41,
+        type: 3}
+      propertyPath: objectToLightOff
+      value: 
+      objectReference: {fileID: 867635128}
+    - target: {fileID: 658748013978330630, guid: 87f89849fa4f7d445840351cdf0b5f41,
+        type: 3}
+      propertyPath: objectToLightOff2
+      value: 
+      objectReference: {fileID: 1007494061}
+    - target: {fileID: 658748013978330630, guid: 87f89849fa4f7d445840351cdf0b5f41,
+        type: 3}
+      propertyPath: enginrLightToTurnOff
+      value: 
+      objectReference: {fileID: 2128618810}
+    - target: {fileID: 658748013978330630, guid: 87f89849fa4f7d445840351cdf0b5f41,
+        type: 3}
+      propertyPath: engineLightToTurnOff
+      value: 
+      objectReference: {fileID: 2128618810}
+    - target: {fileID: 658748013978330630, guid: 87f89849fa4f7d445840351cdf0b5f41,
+        type: 3}
+      propertyPath: enemyPosition
+      value: 
+      objectReference: {fileID: 2016976925}
     - target: {fileID: 5048837061508442633, guid: 87f89849fa4f7d445840351cdf0b5f41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2648,6 +2695,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ee7fe175f5905e41a344dc179e02190, type: 3}
+--- !u!1 &2016976918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5048837061508740713, guid: 87f89849fa4f7d445840351cdf0b5f41,
+    type: 3}
+  m_PrefabInstance: {fileID: 1784476933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2016976925 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5048837061508442633, guid: 87f89849fa4f7d445840351cdf0b5f41,
+    type: 3}
+  m_PrefabInstance: {fileID: 1784476933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2040778782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 050589558d1eca446a29d5dba20e1ff2,
@@ -2686,6 +2745,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 417280425}
+--- !u!1 &2128618808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1467135558794138338, guid: e5cd17dbfce536d4fb103a26a3ae22b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 223503389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &2128618810 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 1467135558804309606, guid: e5cd17dbfce536d4fb103a26a3ae22b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 223503389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2128993593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5ee7fe175f5905e41a344dc179e02190,

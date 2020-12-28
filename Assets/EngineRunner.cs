@@ -15,10 +15,18 @@ public class EngineRunner: MonoBehaviour {
     private Animator animator;
     private float rotationSpeed = 5f;
 
+    [SerializeField] private Transform enemyPosition = null;
+    [SerializeField] private Vector3 currentEnemyPosition;
+    [SerializeField] private float maxDist;
+    [SerializeField] Light engineLightToTurnOff;
+    [SerializeField] ParticleSystem objectToLightOff ;
+    [SerializeField] ParticleSystem objectToLightOff2 ;
+
+
     private void Start() {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-
+        currentEnemyPosition = enemyPosition.position;
         SelectNewTarget();
     }
 
@@ -31,6 +39,14 @@ public class EngineRunner: MonoBehaviour {
         if (navMeshAgent.hasPath) {
             FaceDestination();
         } 
+        //GameObject playerObj = GameObject.Find("Enemy Engine");
+        currentEnemyPosition = enemyPosition.transform.position;
+          float dist = Vector3.Distance(currentEnemyPosition, engine.position);
+        if(dist<1.6){
+            objectToLightOff.Stop();
+            objectToLightOff2.Stop();
+            engineLightToTurnOff.color = Color.black;
+        }
     }
 
     private void FaceDestination() {
